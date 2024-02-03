@@ -3,6 +3,8 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
+const helmet = require("helmet");
+const compression = require("compression");
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -35,6 +37,8 @@ const Exercise = mongoose.model("Exercise", exercisesSchema);
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+app.use(helmet());
+app.use(compression());
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
