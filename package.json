@@ -14,14 +14,10 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
-    "helmet": "^7.1.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",
-    "netlify-cli": "^17.15.7",
-    "netlify-lambda": "^2.0.16",
     "nodemon": "^3.0.3",
     "not": "^0.1.0",
-    "serverless-http": "^3.2.0",
     "working": "^0.0.0"
   },
   "repository": {
